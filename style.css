@@ -1,0 +1,276 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body 
+{
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    /* overflow: hidden; */
+    Font-size: 13px;
+    background-color: #eee;
+}
+.container {
+    height: 700px;
+     width: 920px;
+     margin:20px ;
+    
+     padding: 5px;
+   background-color: #eee;
+     display: grid;
+   grid-template-columns:repeat(4,1fr);
+   grid-template-rows:repeat(2,1fr);
+   gap: 20px;
+   position: relative;
+ }
+ .container>div>div:nth-child(2) p{
+    font-size: 20px;
+    color: white;
+ }
+ .container>div:nth-child(3)>div:nth-child(2) p{
+    font-size: 20px;
+    color: black;
+ }
+ .container>div:nth-child(4)>div:nth-child(2) p{
+    font-size: 20px;
+    color: black;
+ }
+ .container>div:nth-child(2)>div:nth-child(2) p{
+    font-size: 20px;
+    color: black;
+ }
+ /* opacity */
+ .container>div>div:nth-child(3) p{
+opacity: 0.6;
+    color: white;
+ }
+ .container>div:nth-child(3)>div:nth-child(3) p{
+    opacity: 0.6;
+    color: black;
+ }
+ .container>div:nth-child(4)>div:nth-child(3) p{
+    opacity: 0.6;
+        color: black;
+ }
+ .container>div:nth-child(2)>div:nth-child(3) p{
+    opacity: 0.6;
+        color: black;
+ }
+ /* beside the image */
+ .container>div:nth-child(1)>.head-line>div>p:nth-child(1) {
+   font-size: 20px;
+        color: white;
+     }
+  .container>div:nth-child(2)>.head-line>div>p:nth-child(1) {
+        font-size: 20px;
+             color: black;
+          }
+          .container>div:nth-child(3)>.head-line>div>p:nth-child(1) {
+            font-size: 20px;
+                 color: black;
+              }
+              .container>div:nth-child(4)>.head-line>div>p:nth-child(1) {
+                font-size: 20px;
+                     color: black;
+                  }
+                  .container>div:nth-child(5)>.head-line>div>p:nth-child(1) {
+                    font-size: 20px;
+                         color: white;
+                      }
+          
+     /* end beside the image */
+     /* p beside the image */
+ .container>div:nth-child(1)>.head-line>div>p:nth-child(2) {
+    opacity: 0.5;
+         color: white;
+      }
+   .container>div:nth-child(2)>.head-line>div>p:nth-child(2) {
+    opacity: 0.5;
+              color: black;
+           }
+           .container>div:nth-child(3)>.head-line>div>p:nth-child(2) {
+            opacity: 0.5;
+                  color: black;
+               }
+               .container>div:nth-child(4)>.head-line>div>p:nth-child(2) {
+                opacity: 0.5;
+                      color: black;
+                   }
+                   .container>div:nth-child(5)>.head-line>div>p:nth-child(2) {
+                     opacity: 0.5;
+                          color: white;
+                       }
+           
+      /*  p end beside the image */
+ img {
+     border-radius: 50%;
+     width: 50px;
+     height: 100%;
+     object-fit: fill;
+     border:2px solid hsl(263, 55%, 52%);
+ }
+ .container>div:nth-child(1){
+   height:auto;
+   width:auto;
+
+   grid-column:1/3;
+   grid-row:1/1;
+   background-color:  hsl(263, 55%, 52%);
+ }
+ .container>div:nth-child(2) {
+   height:auto;
+   width:auto;
+   background-color: hsl(217, 19%, 35%);
+    grid-column:3/4;
+   grid-row:1/1;
+ }
+ 
+ .container>div:nth-child(3) {
+   height:auto;
+   width:auto;
+   background-color: white;
+    grid-column:4/5;
+   grid-row:1/3;
+ }
+ .container>div:nth-child(4) {
+   height:auto;
+   width:auto;
+   background-color: white;
+      grid-column:1/2;
+   grid-row:2/3;
+   color:black
+ }
+ 
+ .container>div:nth-child(5) {
+   height:auto;
+   width:auto;
+   background-color: hsl(219, 29%, 14%);
+    grid-column:2/4;
+   grid-row:2/3;
+ }
+
+ .head-line {
+     display: flex;
+     gap: 10px;
+ }
+ .container >div {
+     padding: 25px;
+     display: flex;
+     flex-direction: column;
+     gap: 10px;
+     line-height: 20px;
+     border-radius:10px;
+     position: absolute;
+ }
+@media (max-width:375px){
+    .container {
+        height: 304vh;
+        width: auto;
+        margin: 20px;
+        padding: 5px;
+        background-color: #eee;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: repeat(5,1fr);
+        /* gap: 20px; */
+        position: relative;
+        flex-direction: column;
+    }
+    .container>div:nth-child(1) {
+        height: auto;
+        width: 100%;
+        grid-column: 1/1;
+        grid-row: 1/2;
+        background-color: hsl(263, 55%, 52%);
+    }
+    .container>div:nth-child(2) {
+        height: auto;
+        width: 100%;
+        background-color: hsl(217, 19%, 35%);
+        grid-column: 1/1;
+        grid-row: 2/3;
+        top: 25px;
+    }
+    .container>div:nth-child(3) {
+        height: auto;
+        width: 100%;
+        background-color: white;
+        grid-column: 1/1;
+        grid-row: 3/4;
+        margin-bottom: 0px;
+        /* margin-bottom: -75px; */
+        position: absolute;
+        top: -107px;
+    }
+    .container>div:nth-child(4) {
+        height: auto;
+        width: 100%;
+        background-color: white;
+        grid-column: 1/1;
+        grid-row: 5/6;
+        color: black;
+    }
+    .container>div:nth-child(5) {
+        height: auto;
+        width: 100%;
+        background-color: hsl(219, 29%, 14%);
+        grid-column: 1/1;
+        grid-row: 4/5;
+    }
+}
+@media (min-width:375px) and (max-width:775px){
+    .container {
+        height: 304vh;
+        width: auto;
+        margin: 20px;
+        padding: 5px;
+        background-color: #eee;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: repeat(5,1fr);
+        /* gap: 20px; */
+        position: relative;
+        flex-direction: column;
+    }
+    .container>div:nth-child(1) {
+        height: auto;
+        width: 100%;
+        grid-column: 1/1;
+        grid-row: 1/2;
+        background-color: hsl(263, 55%, 52%);
+    }
+    .container>div:nth-child(2) {
+        height: auto;
+        width: 100%;
+        background-color: hsl(217, 19%, 35%);
+        grid-column: 1/1;
+        grid-row: 2/3;
+        top: 25px;
+    }
+    .container>div:nth-child(3) {
+        height: auto;
+        width: 100%;
+        background-color: white;
+        grid-column: 1/1;
+        grid-row: 3/4;
+        margin-bottom: 0px;
+        /* margin-bottom: -75px; */
+        position: absolute;
+        top: -107px;
+    }
+    .container>div:nth-child(4) {
+        height: auto;
+        width: 100%;
+        background-color: white;
+        grid-column: 1/1;
+        grid-row: 5/6;
+        color: black;
+    }
+    .container>div:nth-child(5) {
+        height: auto;
+        width: 100%;
+        background-color: hsl(219, 29%, 14%);
+        grid-column: 1/1;
+        grid-row: 4/5;
+    }
+}
